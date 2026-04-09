@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="theme-color" content="#c95e2b" />
+    <meta
+      name="description"
+      content="A mobile-friendly co-op arcade with bakery, pizza, puzzle, and racing mini-games that works offline."
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Co-op Arcade Date Night</title>
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+    <div class="app-shell">
+      <header class="hero-panel">
+        <div>
+          <p class="eyebrow">Mobile Chrome ready</p>
+          <h1>Co-op Arcade Date Night</h1>
+          <p class="hero-copy">
+            Four cute co-op mini-games built for phones, touch controls, and
+            offline play after the first load. Best for shared-screen or
+            pass-and-play sessions.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="installBtn" class="secondary-btn" hidden>Install Offline</button>
+          <span id="offlineBadge" class="badge">Checking connection...</span>
+        </div>
+      </header>
+
+      <section class="stats-strip">
+        <article class="stat-card">
+          <span class="stat-label">Team stars</span>
+          <strong id="totalStars">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Games cleared</span>
+          <strong id="gamesCleared">0 / 4</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Best run</span>
+          <strong id="favoriteGame">Pick a game</strong>
+        </article>
+      </section>
+
+      <section class="game-grid" aria-label="Mini games">
+        <button class="game-card" data-game="bakery">
+          <span class="game-tag">Bakery</span>
+          <strong>Bakery Co-op</strong>
+          <span>One player grabs ingredients while the other saves the oven.</span>
+        </button>
+        <button class="game-card" data-game="pizza">
+          <span class="game-tag">Kitchen</span>
+          <strong>Pizza Co-op</strong>
+          <span>Build matching pizzas fast enough to keep the queue happy.</span>
+        </button>
+        <button class="game-card" data-game="puzzle">
+          <span class="game-tag">Brain</span>
+          <strong>Puzzle Co-op</strong>
+          <span>Flip memory tiles together and clear the board before time runs out.</span>
+        </button>
+        <button class="game-card" data-game="racing">
+          <span class="game-tag">Arcade</span>
+          <strong>Racing Co-op</strong>
+          <span>Two drivers dodge traffic together using split touch controls.</span>
+        </button>
+      </section>
+
+      <main id="gameStage" class="game-stage" aria-live="polite">
+        <section class="welcome-card">
+          <p class="eyebrow">Pick any mode</p>
+          <h2>Ready for co-op play</h2>
+          <p>
+            Open this link on mobile Chrome, let it load once, and it will keep
+            working offline. Each mini-game is tuned for touch, short rounds,
+            and local co-op play.
+          </p>
+          <ul class="welcome-list">
+            <li>Bakery: collect ingredients and hit the oven sweet spot.</li>
+            <li>Pizza: build exact orders before the timer empties.</li>
+            <li>Puzzle: two-player memory challenge with quick rounds.</li>
+            <li>Racing: both drivers survive together for the best score.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <noscript>
+      <p class="noscript-note">This game needs JavaScript enabled to run.</p>
+    </noscript>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

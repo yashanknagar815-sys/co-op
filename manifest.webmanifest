@@ -1,0 +1,24 @@
+{
+  "name": "Co-op Arcade Date Night",
+  "short_name": "Co-op Arcade",
+  "description": "A phone-friendly co-op arcade with bakery, pizza, puzzle, and racing mini-games that keeps working offline after the first load.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff4e7",
+  "theme_color": "#c95e2b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-mask.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
